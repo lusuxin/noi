@@ -1,4 +1,5 @@
-var n,x,i,j,t,z,a,b,c,s:longint;
+var x,i:longint;
+	s:int64;
 begin
 	assign(input,'zhao.in');
 	reset(input);
@@ -6,13 +7,12 @@ begin
 	rewrite(output);
 	
 	read(x);
-	b:=1;
 	
 	for i:=2 to x+1 do		
 	begin
 		s:=s+i div 2;
 	end;
-	
+
 	write(s+1);
 	
 	close(input);
