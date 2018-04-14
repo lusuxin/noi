@@ -2,7 +2,7 @@ var m,n,s,a,b,c,d:real;
 begin
 	assign(input,'mianji.in');
 	reset(input);
-	assign(output,'minaji.out');
+	assign(output,'mianji.out');
 	rewrite(output);
 
 	read(m,n);

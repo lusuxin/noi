@@ -1,4 +1,4 @@
-var n,m,r:longint;
+var n,m,r:qword;
 begin
 	assign(input,'fruit.in');
 	reset(input);

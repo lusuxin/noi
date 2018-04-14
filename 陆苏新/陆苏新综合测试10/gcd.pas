@@ -15,8 +15,7 @@ begin
 		n:=r;
 	end;
 	
-	writeln(n);
-	write(s div n);
+	write(n,' ',s div n);
 
 	close(input);
 	close(output);
