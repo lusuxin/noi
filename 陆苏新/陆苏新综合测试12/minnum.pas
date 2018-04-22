@@ -1,4 +1,4 @@
-var x,i,j,s:longint;
+var x,i,j,s:qword;
 begin
 	assign(input,'minnum.in');
 	reset(input);
@@ -6,21 +6,16 @@ begin
 	rewrite(output);
 
 	read(x);
+	j:=1;
 	
-	for i:=1 to x do
+	while s<x do
 	begin
-		for j:=i to i+(i-1) do
-		begin
-			s:=s+j;
-			if s>=x then
-			begin	
-				write(i);
-				break;
-			end;	
-		end;
-		if s>=x then
-			break;
+		i:=i+1;
+		s:=(j+i)*i div 2;
+		j:=j+2;
 	end;
+	
+	write(i);
 
 	close(input);
 	close(output);

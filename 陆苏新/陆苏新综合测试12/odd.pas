@@ -1,4 +1,4 @@
-var i,j,s,w,b,n:longint;
+var s,a,n:qword;
 begin
 	assign(input,'odd.in');
 	reset(input);
@@ -6,25 +6,15 @@ begin
 	rewrite(output);
 
 	read(n);
-	
-	for i:=1 to n*n do
+	a:=1;
+	s:=1;
+	while s<n do
 	begin
-		w:=w+1;
-		if i mod 2=1 then
-		begin
-			for j:=1 to w do
-			begin
-				s:=w;
-				b:=b+1;
-				if b=n then
-					break;
-			end;
-		end;
-		if b=n then
-			break;
+		a:=a+2;
+		s:=s+a;
 	end;
 
-	write(s);
+	write(a);
 
 	close(input);
 	close(output);
