@@ -7,30 +7,30 @@ begin
 
 	read(a,b,c);
 	
-	c:=maxlongint;
-	
 	if a>b then 
 	begin
-		a:=t;
+		t:=a;
 		a:=b;
 		b:=t;
 	end;
 	
 	if a>c then
 	begin
-		a:=t;
+		t:=a;
 		a:=c;
 		c:=t;
 	end;
 	
 	if b>c then
 	begin
-		b:=t;
+		t:=b;
 		b:=c;
 		c:=t;
 	end;
 	
-	if (a-b=-1)and(a-c=1) then
+	//writeln(a,' ',b,' ',c);
+	
+	if (a-b=-1)and(b-c=-1) then
 		write('TRUE')
 	
 	else
